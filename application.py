@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def get_movies():
-    api_key = os.environ.get("007ffd5aae8877e2843d61c14a9fe53d")
+    api_key = os.environ.get("TMDB_API_KEY")
     if not api_key:
         # Mensaje claro si no has configurado la variable en Azure
         return make_response("TMDB_API_KEY no configurada en App Settings.", 500)
